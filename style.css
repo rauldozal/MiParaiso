@@ -10,6 +10,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: #f0f8ff;
+  overflow-x: hidden;
 }
 
 body {
@@ -26,17 +27,9 @@ main {
 }
 
 header {
-  background-color: #0099cc;
-  color: white;
+  color: black;
   padding: 1em;
   text-align: center;
-}
-
-nav a {
-  margin: 0 1em;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 main {
@@ -45,12 +38,15 @@ main {
 
 .image-row {
   display: flex;
+  flex-wrap: wrap;
   gap: 10px;
 }
 
 .image-row img {
-  width: 200px;
+  flex: 1 1 300px;
+  max-width: 200px;
   height: auto;
+  display: block;
 }
 
 footer {
