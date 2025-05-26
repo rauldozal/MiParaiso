@@ -42,15 +42,10 @@ main {
 
 .image-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-  gap: 1rem; /* spacing between images */
+  grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+  gap: 0.5rem;
   padding: 1rem;
-}
-
-@media (max-width: 480px) {
-  .image-row {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  }
+  box-sizing: border-box;
 }
 
 .image-row img {
