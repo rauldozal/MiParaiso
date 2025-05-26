@@ -62,7 +62,8 @@ footer {
 }
 
 h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
   color: #333;
+  letter-spacing: 1px;
 }
