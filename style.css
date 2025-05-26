@@ -42,7 +42,7 @@ main {
 
 .image-row {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* 6 equal-width columns */
+  grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
   gap: 1rem; /* spacing between images */
   padding: 1rem;
 }
