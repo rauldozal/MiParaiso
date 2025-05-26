@@ -15,11 +15,10 @@ body {
 
 body {
   background-image: url('images/splash.jpg');
-  background-size: cover;
-  background-position: center;
+  background-size: cover;         /* or 'contain' */
   background-repeat: no-repeat;
-  height: 100vh;
-  margin: 0;
+  background-attachment: fixed;   /* Makes it stay in place while scrolling */
+  background-position: center;
 }
 
 main {
