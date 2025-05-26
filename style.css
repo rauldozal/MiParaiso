@@ -41,13 +41,14 @@ main {
 }
 
 .image-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr); /* 6 equal-width columns */
+  gap: 1rem; /* spacing between images */
+  padding: 1rem;
 }
 
 .image-row img {
-  width: 10vw;
+  width: 100%;
   height: auto;
   display: block;
 }
