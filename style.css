@@ -67,3 +67,26 @@ h1 {
   color: #333;
   letter-spacing: 1px;
 }
+
+.amenities-list {
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  max-width: 95vw;
+  margin: 1.5em auto;
+}
+
+.amenities-list li {
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.amenities-list li::before {
+  content: "✓";
+  margin-right: 0.5em;
+  color: green;
+}
+
+.spanish {
+  color: #6200ee;  /* Light blue, adjust as desired */
+  font-style: italic;
+}
