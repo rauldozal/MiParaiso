@@ -78,6 +78,7 @@ h1 {
 
 .amenities-list li {
   font-size: clamp(1rem, 1vw, 2rem);
+  font-weight: bold;
 }
 
 .amenities-list li::before {
