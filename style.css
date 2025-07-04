@@ -40,6 +40,88 @@ main {
   padding: 2em;
 }
 
+.image-container {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding: 20px;
+}
+
+    .image-container img {
+      height: 150px;
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal Overlay */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.9); /* dark overlay */
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .modal-content {
+      max-width: 80vw;
+      max-height: 80vh;
+      object-fit: contain;
+      background-color: transparent; /* ensures no white */
+      border: none;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+    }
+
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 35px;
+      color: white;
+      cursor: pointer;
+      z-index: 1001;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+.modal button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1002;
+  border-radius: 8px;
+  user-select: none;
+  transition: background 0.2s;
+}
+
+.modal button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.modal .prev {
+  left: 20px;
+}
+
+.modal .next {
+  right: 20px;
+}
+
 .image-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
