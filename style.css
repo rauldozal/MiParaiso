@@ -54,7 +54,8 @@ main {
       transition: transform 0.2s;
     }
 
-    .image-container img:hover {
+    .image-container img:hover,
+    .image-row img:hover {
       transform: scale(1.05);
     }
 
