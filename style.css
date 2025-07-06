@@ -48,7 +48,7 @@ main {
 }
 
     .image-container img {
-      height: 150px;
+      height: 200px;
       cursor: pointer;
       border-radius: 8px;
       transition: transform 0.2s;
@@ -98,7 +98,7 @@ main {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 40px;
+  font-size: 4vw;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   border: none;

@@ -21,12 +21,20 @@
     <section>
       <h2>Menu</h2>
 
-      <div class="image-row">
-        <img src="images/menu_1.jpg" alt="Piscina desde el ángulo norte" />
-        <img src="images/menu_2.jpg" alt="Vista nocturna de la piscina" />
-        <img src="images/menu_3.jpg" alt="Vista nocturna de la piscina" />
-        <img src="images/menu_4.jpg" alt="Vista nocturna de la piscina" />
-        <img src="images/menu_5.jpg" alt="Vista nocturna de la piscina" />
+      <div class="image-row ">
+        <img src="images/menu_1.jpg" alt="Piscina desde el ángulo norte"  class="zoomable"/>
+        <img src="images/menu_2.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
+        <img src="images/menu_3.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
+        <img src="images/menu_4.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
+        <img src="images/menu_5.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
+      </div>
+
+      <!-- Modal Overlay -->
+      <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modal-img" class="modal-content" alt="Zoomed Image">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
       </div>
 
       <!-- <h2>Video</h2>
@@ -45,3 +53,4 @@
   let pageName = "restaurant";
   updateUrl(pageName);
 </script>
+<script type="text/javascript" src="image_handler.js"></script>
