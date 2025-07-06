@@ -48,7 +48,7 @@ main {
 }
 
     .image-container img {
-      height: 200px;
+      height: 70vw;
       cursor: pointer;
       border-radius: 8px;
       transition: transform 0.2s;
@@ -71,6 +71,7 @@ main {
     }
 
     .modal-content {
+      width: 70vw !important;
       max-width: 80vw;
       max-height: 80vh;
       object-fit: contain;
@@ -123,17 +124,18 @@ main {
 }
 
 .image-row {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  display: flex;
   gap: 0.5rem;
   padding: 1rem;
   box-sizing: border-box;
+  overflow-x: auto;
 }
 
 .image-row img {
-  width: 100%;
-  height: auto;
-  display: block;
+  height: 70vw;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: transform 0.2s;
 }
 
 footer {
