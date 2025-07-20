@@ -98,47 +98,7 @@
       </ul>
 
       <h2>Prices/Precios</h2>
-      <div style="overflow-x: auto; width: 100%;">
-        <table style="width: 100%; min-width: 600px; border-collapse: collapse; text-align: left;">
-          <thead>
-            <tr style="background-color: #f2f2f2;">
-              <th class="priceTable">Day
-                <span class="spanish">/ Dia</span></th>
-              <th class="priceTable">Price
-                <span class="spanish">/ Precio</span></th>
-              <th class="priceTable">Deposit(Refundable)
-                <br><span class="spanish">/ Deposito(Reembosable)</span></th>
-              <th class="priceTable">Hours
-                <span class="spanish">/ Horas</span></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="priceTable">Monday – Thursday</td>
-              <td class="priceTable">$500/day</td>
-              <td class="priceTable">$100</td>
-              <td class="priceTable">5hrs + 1hr decor</td>
-            </tr>
-            <tr>
-              <td class="priceTable">Friday</td>
-              <td class="priceTable">$600/day</td>
-              <td class="priceTable">$100</td>
-              <td class="priceTable">5hr + 1hr decor</td>
-            </tr>
-            <tr>
-              <td class="priceTable">Saturday</td>
-              <td class="priceTable">$700/day</td>
-              <td class="priceTable">$100</td>
-              <td class="priceTable">12pm - 12am</td>
-            </tr>
-            <tr>
-              <td class="priceTable">Sunday</td>
-              <td class="priceTable">$600/day</td>
-              <td class="priceTable">$100</td>
-              <td class="priceTable">5hrs + 1hr decor</td>
-            </tr>
-          </tbody>
-        </table>
+      <div id="DisplayPrice" style="display: flex; flex-wrap: wrap; gap: 16px;">
       </div>
       <br>
 
@@ -159,7 +119,34 @@
 </body>
 </html>
 <script>
+
+  function display_prices() {
+    const prices = [
+      {day: "Monday – Thursday", price: "$500/day", deposit: "$100", hours: "5hrs + 1hr decor"},
+      {day: "Friday", price: "$600/day", deposit: "$100", hours: "5hrs + 1hr decor"},
+      {day: "Saturday", price: "$700/day", deposit: "$100", hours: "12pm - 12am"},
+      {day: "Sunday", price: "$600/day", deposit: "$100", hours: "5hrs + 1hr decor"},
+    ];
+
+    let h = '';
+    prices.forEach(element => {
+      h += '<div style="flex: 1 1 250px; border: 1px solid #ccc; border-radius: 8px; padding: 16px;">';
+      h +=  '<h3>' + element.day + '</h3>';
+      h +=  '<p><strong>Price / Precio:</strong>' + element.price + '</p>';
+      h +=  '<p><strong>Deposit / Deposito:</strong>' + element.deposit + '</p>';
+      h +=  '<p><strong>Hours / Horas:</strong>' + element.hours + '</p>';
+      h +=  '<p style="font-size: 13px; color: #555; margin-top: 12px;">';
+      h +=   '* Deposit is fully refundable after inspection.<br>';
+      h +=   '* El depósito es totalmente reembolsable después de la inspección.';
+      h +=  '</p>';
+      h += '</div>';
+    });
+    
+    document.getElementById('DisplayPrice').innerHTML = h;
+  }
+
   let pageName = "pool2";
   updateUrl(pageName);
+  display_prices();
 </script>
 <script type="text/javascript" src="image_handler.js"></script>
