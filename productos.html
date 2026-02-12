@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Paraíso - Pool</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shirts.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="pageUtil.js"></script>
+</head>
+<body>
+  <div class="bg-wallpaper"></div>
+  <header>
+    <h1>Productos Personalizados</h1>
+    <p>Camisas, llaveros y más hechos a tu gusto.</p>
+    <nav id="navbar"></nav>
+    <script type="text/javascript" src="navbar.js"></script>
+  </header>
+
+  <main>
+
+    <section class="how-to-order">
+<p>
+  <strong>Cómo ordenar:</strong>
+  Toma una captura del diseño que ves aquí o escríbenos con tu idea.
+  Indícanos el <strong>producto</strong>, talla, color y cualquier detalle especial.
+</p>
+
+<h2>Catálogo Actual</h2>
+<p>
+  Estos son los productos que tenemos en exhibición actualmente.
+  ¿Buscas algo diferente? ¡También hacemos diseños personalizados por pedido!
+</p>
+
+  <div class="category-grid">
+    <a class="category-card" href="kids.html">
+      <h3>Niños / Escuela</h3>
+      <p>100 Días de Escuela y diseños escolares.</p>
+    </a>
+
+    <a class="category-card" href="keychains.html">
+  <h3>Llaveros Personalizados</h3>
+  <p>Fotos, nombres, iniciales y diseños especiales.</p>
+</a>
+
+<div class="category-card disabled">
+<h3>Diseños Personalizados</h3>
+<p>¿Buscas otro tema? Halloween, Día de las Madres, cumpleaños y más.
+¡Podemos hacerlo a pedido!</p>
+
+
+
+</section>
+
+      <!-- Modal Overlay -->
+      <div id="image-modal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modal-img" class="modal-content" alt="Zoomed Image">
+        <button class="prev">&lt;</button>
+        <button class="next">&gt;</button>
+      </div>
+  
+     
+      <br>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script type="text/javascript" src="footer.js"></script>
+</body>
+</html>
+<script>
+
+  function display_prices() {
+    const prices = [
+      {day: "Toddler/Youth", price: "$12"},
+      {day: "Adults (Small-XL)", price: "$15"},
+      {day: "2XL", price: "$18",},
+      {day: "3XL", price: "$20"},
+      {day: "Dri-Fit Youth", price: "$15"},
+      {day: "Dri-Fit Adults (Small-XL)", price: "$18"},
+      {day: "Dri-Fit 2XL", price: "$20"},
+      {day: "Dri-Fit 3XL", price: "$22"},
+    ];
+    
+    let h = '';
+    prices.forEach(element => {
+      h += '<div style="flex: 1 1 250px; border: 1px solid #ccc; border-radius: 8px; padding: 16px;">';
+      h +=  '<h3>' + element.day + '</h3>';
+      h +=  '<p><strong>Price / Precio:</strong>' + element.price + '</p>';
+      h +=  '<p style="font-size: 13px; color: #555; margin-top: 12px;">';
+      h +=   '* Special orders subject to extra cost.<br>';
+      h +=   '* Ordenes especiales tendra un costo extra.';
+      h +=  '</p>';
+      h += '</div>';
+    });
+    
+    document.getElementById('DisplayPrice').innerHTML = h;
+  }
+
+  let pageName = "shirts";
+  updateUrl(pageName);
+  display_prices();
+

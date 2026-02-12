@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   <script type="text/javascript" src="pageUtil.js"></script>
 </head>
-<body>
+<body class="restaurant-page">
   <div class="bg-wallpaper"></div>
   <header>
     <h1>Mi Paraiso Restaurant</h1>
@@ -19,15 +19,39 @@
 
   <main>
     <section>
-      <h2>Menu</h2>
+      <section class="restaurant-section">
+  <div class="restaurant-header">
+    <div>
+      <h2>Menú</h2>
+      <p class="restaurant-sub">Haz clic en cualquier imagen para ver el menú completo y precios.</p>
+    </div>
 
-      <div class="image-row ">
-        <img src="images/menu_1.jpg" alt="Piscina desde el ángulo norte"  class="zoomable"/>
-        <img src="images/menu_2.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
-        <img src="images/menu_3.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
-        <img src="images/menu_4.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
-        <img src="images/menu_5.jpg" alt="Vista nocturna de la piscina"   class="zoomable"/>
-      </div>
+    <div class="order-box">
+  <h3>📞 Ordena Aquí</h3>
+
+  <a href="tel:9565162932" class="call-btn">
+    Llamar: 956-516-2932
+  </a>
+
+  <p class="delivery-note">
+    <p>Pickup disponible.</p>
+<p>Entrega disponible en ciertas áreas (cargo adicional).</p>
+<p><strong>Horario</strong></p>
+<ul class="hours-list">
+  <li>Lunes a Viernes: 7:00 AM – 4:00 PM</li>
+  <li>Sábado: 8:00 AM – 4:00 PM</li>
+  <li>Domingo: Cerrado</li>
+</ul>
+</p>
+  </div>
+
+  <div class="menu-grid">
+    <img src="https://res.cloudinary.com/dcep9fije/image/upload/v1770698045/menu_1_v9rpai.jpg" alt="Menú 1" class="menu-thumb zoomable">
+    <img src="https://res.cloudinary.com/dcep9fije/image/upload/v1770698045/menu_2_ewsb7c.jpg" alt="Menú 2" class="menu-thumb zoomable">
+    <img src="https://res.cloudinary.com/dcep9fije/image/upload/v1770698046/menu_3_d3jsk3.jpg" alt="Menú 3" class="menu-thumb zoomable">
+    <img src="https://res.cloudinary.com/dcep9fije/image/upload/v1770698046/menu_4_iqebpb.jpg" alt="Menú 4" class="menu-thumb zoomable">
+    <img src="https://res.cloudinary.com/dcep9fije/image/upload/v1770698046/menu_5_uxrn6v.jpg" alt="Menú 5" class="menu-thumb zoomable">
+  </div>
 
       <!-- Modal Overlay -->
       <div id="image-modal" class="modal">

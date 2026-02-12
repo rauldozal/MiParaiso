@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Llaveros Personalizados | Mi Paraíso</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="shirts.css" />
+  <script type="text/javascript" src="pageUtil.js"></script>
+</head>
+
+<body class="keychains-page">
+  <div class="bg-wallpaper"></div>
+
+  <header>
+    <h1>Llaveros Personalizados</h1>
+    <p>Fotos, nombres, iniciales y diseños especiales.</p>
+    <nav id="navbar"></nav>
+    <script type="text/javascript" src="navbar.js"></script>
+  </header>
+
+  <main>
+    <section class="how-to-order">
+      <p><strong>Cómo ordenar:</strong> Envíanos el codigo y dinos el estilo que quieres.</p>
+      <p><strong>Privacidad:</strong> No publicamos fotos de personas en la página. Te mostramos ejemplos y trabajamos por mensaje.</p>
+    </section>
+
+    <section class="shirt-hub">
+      <h2>Ejemplos</h2>
+      <p>Estos son ejemplos de estilo. Cada llavero se personaliza con foto, nombre o diseño a tu gusto.</p>
+
+      <div class="design-grid">
+        <!-- Replace these images later with your real example pics -->
+        <div class="design-item">
+          <img src="images/KC-01.png" class="zoomable shirt-photo" alt="Llavero ejemplo 1">
+          <p class="design-code">KC-01</p>
+        </div>
+
+        <div class="design-item">
+          <img src="images/KC-02.png" class="zoomable shirt-photo" alt="Llavero ejemplo 2">
+          <p class="design-code">KC-02</p>
+        </div>
+
+        <div class="design-item">
+          <img src="images/KC-03.png" class="zoomable shirt-photo" alt="Llavero ejemplo 3">
+          <p class="design-code">KC-03</p>
+        </div>
+
+        <div class="design-item">
+          <img src="images/KC-04.png" class="zoomable shirt-photo" alt="Llavero ejemplo 4">
+          <p class="design-code">KC-04</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional: prices box (only if you want it today) -->
+    <section style="margin-top: 24px;">
+      <h2>Precios</h2>
+      <p>Depende del tamaño y estilo. Escríbenos para cotizar rápido.</p>
+    </section>
+  </main>
+
+  <div id="footer"></div>
+  <script type="text/javascript" src="footer.js"></script>
+
+  <script>
+    let pageName = "keychains";
+    updateUrl(pageName);
+  </script>
+</body>
+</html>

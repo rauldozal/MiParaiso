@@ -1,3 +1,3 @@
 function updateUrl(name) {
-    history.pushState(null, "", name);
+    // history.pushState(null, "", name);
 }
